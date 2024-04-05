@@ -2,6 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
+
 from .models import Movie
 from .serializers import MovieSerializer
 
@@ -99,7 +100,6 @@ def movie_update(request, pk):
     try:
         # Get the movie instance to be updated
         movie = Movie.objects.get(pk=pk)
-        print(movie)
         
         # Serialize the updated movie data
         serializer = MovieSerializer(instance=movie, data=request.data)

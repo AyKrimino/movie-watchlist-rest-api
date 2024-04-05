@@ -12,7 +12,7 @@ class Movie(models.Model):
     rating = models.DecimalField(max_digits=2, decimal_places=1)
     poster = models.ImageField(
                                 default='api/static/api/images/posters/default_poster.jpg', 
-                                upload_to='api/static/api/images/posters/', 
+                                upload_to='posters', 
                                 blank=True
                             )
 
